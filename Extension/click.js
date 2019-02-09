@@ -1,4 +1,5 @@
 console.log("HELLO WORLD")
+var prev = "";
 
 setInterval(function(){
 	var temp = document.getElementsByClassName("_1mf _1mj")[0];
@@ -12,9 +13,22 @@ setInterval(function(){
 		if (tex != null) {
 			getNiceness(tex, draw_box);
 		}
-
-	
+		
+		if (tex == "" && prev.length >= 2){
+			getNiceness(tex, send_message);
+		}
+		prev = tex;
 }, 400);
+
+function send_message(value){
+	var num = 0;
+	if (value > 0) {num = 1;}
+	else if (value < 0) {num = -1;}
+	console.log("sending message");
+	chrome.runtime.sendMessage({niceness: num.toString()}, function(response) {
+	
+});
+}
 
 function ignoreEmojies(object){
 	if (object.className != null && object.className != "_21wj"){
