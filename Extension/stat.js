@@ -2,6 +2,7 @@ var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 
 statLabels = ["Mean", "Neutral", "Nice"]
+var chart;
 makeChart()
 
 function setData(data, cb) {
@@ -42,7 +43,7 @@ function makeChart() {
 	data = {
 	    datasets: [{
 		backgroundColor: ["#ff6961", "#76A9DC", "gray"],
-		data: [0, 0, 0]
+		data: [2, 5, 10]
 	    }],
 
 	    labels: statLabels.slice(),
@@ -60,14 +61,13 @@ function makeChart() {
 	    }
 	};
 	// And for a doughnut chart
-	var chart = new Chart(ctx, {
+	chart = new Chart(ctx, {
 	    type: 'doughnut',
 	    data: data,
 	});
 }
 
 function addData(data) {
-    chart.data.labels.push(statLabels.slice());
     chart.data.datasets.forEach((dataset) => {
         dataset.data.push(data);
     });
@@ -75,15 +75,16 @@ function addData(data) {
 }
 
 function removeData() {
-    chart.data.labels.pop();
     chart.data.datasets.forEach((dataset) => {
         dataset.data.pop();
     });
     chart.update();
 }
 
+/*
 setInterval(function() {
 	updateChart();
 }, 500);
+*/
 
 console.log("Things Ready")
