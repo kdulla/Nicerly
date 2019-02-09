@@ -1,0 +1,14 @@
+{
+	"name": "Read Input Stuff Hopefully",
+	"version": "1.0",
+	"description": "Basically that",
+	"manifest_version": 2 ,
+	"browser_action": {
+		"default_popup": "popup.html"
+	} ,
+	"content_scripts": [{
+		"matches": ["https://www.messenger.com/*"],
+		"css": ["blank.css"] ,
+		"js": ["click.js"]
+	}]
+}

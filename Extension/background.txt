@@ -1,0 +1,2 @@
+var x = document.querySelector("data-target");
+console.log(x.text());
