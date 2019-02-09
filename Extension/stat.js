@@ -108,3 +108,5 @@ function onDataListener(msg, sender, sendResp) {
 		});
 	}
 }
+
+console.log("Things Ready")
