@@ -1,16 +1,17 @@
 {
-	"name": "Read Input Stuff Hopefully",
+	"name": "Nicerly",
 	"version": "1.0",
-	"description": "Basically that",
+	"description": "An extension that scans messages to make sure they aren't mean.",
 	"manifest_version": 2 ,
-	"browser_action": {
-		"default_popup": "popup.html"
-	} ,
 	"permissions": [
 		"https://nicerly.azurewebsites.net/"
 	],
+	"browser_action": {
+		"default_popup": "popup.html"
+	} ,
 	"content_scripts": [{
 		"matches": ["https://www.messenger.com/*"],
-		"js": ["click.js","compromise.js"]
+		"css": ["speech.css"] ,
+		"js": ["click.js"]
 	}]
 }
