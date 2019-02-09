@@ -9,8 +9,8 @@ data = {
 
     // These labels appear in the legend and in the tooltips when hovering different arcs
     labels: [
-        'Red',
-        'Blue'
+        'Mean',
+        'Nice'
     ],
     options: {
     	responsive: true,
