@@ -10,8 +10,7 @@ setInterval(function(){
 		
 		}
 		if (tex != null) {
-		
-		getNiceness(tex, draw_box);
+			getNiceness(tex, draw_box);
 		}
 
 	
