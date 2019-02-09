@@ -1,7 +1,7 @@
 {
-	"name": "Read Input Stuff Hopefully",
+	"name": "Nicerly",
 	"version": "1.0",
-	"description": "Basically that",
+	"description": "A chat extension that encourages niceness.",
 	"manifest_version": 2 ,
 	"browser_action": {
 		"default_popup": "popup.html"
@@ -12,5 +12,7 @@
 	"content_scripts": [{
 		"matches": ["https://www.messenger.com/*"],
 		"js": ["click.js"]
-	}]
+	}],
+	"icons": { "128": "icon.png"
+					}
 }
