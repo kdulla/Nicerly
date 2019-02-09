@@ -22,14 +22,14 @@ setInterval(function(){
 	}
 }, 400);
 
-function getNiceness(message) {
+function getNiceness(message, callback) {
 	const Http = new XMLHttpRequest();
 	const url='https://nicerly.azurewebsites.net/analyze?message=' + message;
 	Http.open("GET", url);
 	Http.send();
 	Http.onreadystatechange = (e) => {
 		if (Http.responseText.length != 0) {
-			console.log(Http.responseText)
+			callback(Http.responseText)
 		}
 	}
 }
