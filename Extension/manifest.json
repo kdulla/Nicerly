@@ -11,6 +11,6 @@
 	],
 	"content_scripts": [{
 		"matches": ["https://www.messenger.com/*"],
-		"js": ["click.js"]
+		"js": ["click.js","compromise.js"]
 	}]
 }
