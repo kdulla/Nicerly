@@ -6,7 +6,19 @@ setInterval(function(){
 
 		if (tex != null) {
 			getNiceness(tex);
+			
+			if (document.getElementById("added") == null){
+			var div = document.createElement("div");
+			div.id = "added"
+		 }
+		 else{
+			 var div = document.getElementById("added");
+		 }
+		 div.className = "speech-bubble";
+		 div.innerHTML = tex;
+		 document.body.appendChild(div);
 		}
+
 	}
 }, 400);
 

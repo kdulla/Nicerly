@@ -3,14 +3,15 @@
 	"version": "1.0",
 	"description": "A chat extension that encourages niceness.",
 	"manifest_version": 2 ,
-	"browser_action": {
-		"default_popup": "popup.html"
-	} ,
 	"permissions": [
 		"https://nicerly.azurewebsites.net/"
 	],
+	"browser_action": {
+		"default_popup": "popup.html"
+	} ,
 	"content_scripts": [{
 		"matches": ["https://www.messenger.com/*"],
+		"css": ["speech.css"] ,
 		"js": ["click.js"]
 	}],
 	"icons": { "128": "icon.png"
