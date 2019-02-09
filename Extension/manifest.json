@@ -1,6 +1,6 @@
 {
 	"name": "Nicerly",
-	"version": "1.2",
+	"version": "1.3",
 	"description": "A chat extension that encourages niceness.",
 	"manifest_version": 2 ,
 	"permissions": [
