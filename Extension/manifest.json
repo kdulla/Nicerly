@@ -4,7 +4,8 @@
 	"description": "A chat extension that encourages niceness.",
 	"manifest_version": 2 ,
 	"permissions": [
-		"https://nicerly.azurewebsites.net/"
+		"https://nicerly.azurewebsites.net/",
+		"storage"
 	],
 	"browser_action": {
 		"default_popup": "popup.html"
@@ -14,6 +15,6 @@
 		"css": ["speech.css"] ,
 		"js": ["click.js", "Chart.js"]
 	}],
-	"icons": { "128": "icon.png"
+	"icons": { "128": "icon2.png"
 					}
 }
